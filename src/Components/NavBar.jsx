@@ -6,7 +6,12 @@ const NavBar = () => {
     <div className="flex justify-between items-center">
       <div></div>
       <div className="nav flex gap-5 text-accent">
-        <NavLink to="/">Home</NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? "underline" : "")}
+          to="/"
+        >
+          Home
+        </NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/career">Career</NavLink>
       </div>
