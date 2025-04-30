@@ -12,8 +12,18 @@ const NavBar = () => {
         >
           Home
         </NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/career">Career</NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? "underline" : "")}
+          to="/"
+        >
+          About
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? "underline" : "")}
+          to="/"
+        >
+          Career
+        </NavLink>
       </div>
       <div className="login-btn flex gap-5">
         <img src={user} alt="" />
